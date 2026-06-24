@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VigiaLab - Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #121214; /* Fundo escuro idêntico ao login */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cadastro-container {
+            background-color: #1e1e24; /* Caixa ligeiramente mais clara */
+            padding: 40px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px; /* Um pouco mais larga que o login para caber a linha dupla */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cadastro-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .cadastro-header h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .cadastro-header h2 span {
+            color: #ff6b00; /* Laranja VigiaLab */
+        }
+
+        .cadastro-header p {
+            font-size: 14px;
+            color: #a8a8b3;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px; /* Espaço entre o campo Senha e Confirmar Senha */
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #e1e1e6;
+        }
+
+        /* Estilização para inputs de texto e para o select de perfil */
+        .input-group input, .input-group select {
+            background-color: #121214;
+            border: 1px solid #29292e;
+            padding: 12px;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            transition: border 0.2s;
+            width: 100%;
+        }
+
+        /* Ajuste específico para a setinha do select no dark mode */
+        .input-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'><path stroke='%23a8a8b3' stroke-width='1.5' d='M1 1l4 4 4-4'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #ff6b00; /* Borda laranja ao focar */
+        }
+
+        .btn-cadastrar {
+            background-color: #ff6b00;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-cadastrar:hover {
+            background-color: #e05e00;
+        }
+
+        .cadastro-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cadastro-footer p {
+            font-size: 14px;
+            color: #a8a8b3;
+        }
+
+        .cadastro-footer a {
+            color: #ff6b00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cadastro-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cadastro-container">
+        <div class="cadastro-header">
+            <h2>Bem-Vindo ao <span>VigiaLab</span></h2>
+            <p>Preencha os dados abaixo para começar</p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" name="email" placeholder="entre com o @escola" required>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group flex-1">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" required>
+                </div>
+                <div class="input-group flex-1">
+                    <label for="confirma-senha">Confirmar Senha</label>
+                    <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirmar senha" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="perfil">Tipo de Perfil</label>
+                <select id="perfil" name="perfil" required>
+                    <option value="" disabled selected>Selecione a sua função...</option>
+                    <option value="professor">Professor Regente</option>
+                    <option value="admin">Coordenador / Administrador </option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-cadastrar">Cadastrar</button>
+
+            <div class="cadastro-footer">
+                <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
