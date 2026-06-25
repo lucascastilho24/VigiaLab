@@ -55,35 +55,36 @@
             color: #ff6b00;
         }
 
-        /* CONTAINER */
         .dashboard-container {
             padding: 30px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* FILTROS */
         .filters-section {
             background-color: #1e1e24;
-            padding: 20px;
+            padding: 15px 20px;
             border-radius: 8px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: flex-end;
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .filter-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            flex: 1;
-            min-width: 200px;
+            gap: 6px;
+            min-width: 180px;
+        }
+
+        .push-right {
+            margin-left: auto; 
         }
 
         .filter-group label {
-            font-size: 13px;
+            font-size: 12px;
             color: #a8a8b3;
             font-weight: 500;
         }
@@ -92,40 +93,39 @@
             background-color: #121214;
             border: 1px solid #29292e;
             color: white;
-            padding: 10px;
+            padding: 8px 12px;
             border-radius: 4px;
             outline: none;
             cursor: pointer;
+            font-size: 14px;
         }
 
-        /* Toggle Switch (Turno) */
         .toggle-switch {
             display: flex;
             background-color: #121214;
             border: 1px solid #29292e;
             border-radius: 4px;
-            padding: 3px;
+            padding: 2px;
+            height: 38px; /* Alinha a altura com os selects */
         }
 
         .toggle-btn {
-            flex: 1;
             background: none;
             border: none;
             color: #a8a8b3;
-            padding: 8px;
+            padding: 0 20px;
             cursor: pointer;
             font-size: 14px;
             border-radius: 4px;
             transition: all 0.2s;
+            font-weight: 500;
         }
 
         .toggle-btn.active {
             background-color: #ff6b00;
             color: white;
-            font-weight: 500;
         }
 
-        /* TABELA DE HORÁRIOS */
         .table-section {
             background-color: #1e1e24;
             border-radius: 8px;
@@ -142,77 +142,162 @@
 
         .cronograma-table th, .cronograma-table td {
             border: 1px solid #29292e;
-            padding: 12px;
-            vertical-align: top;
-            width: 17%;
+            padding: 8px 12px;
+            vertical-align: middle;
         }
 
         .cronograma-table th {
             background-color: #121214;
             color: #a8a8b3;
             font-weight: 500;
-            font-size: 14px;
-        }
-
-        .cronograma-table th:first-child, .cronograma-table td:first-child {
-            width: 15%;
+            font-size: 13px;
+            height: 40px;
         }
 
         .hora-col {
             background-color: #121214;
-            font-size: 13px;
+            font-size: 12px;
+            width: 12%;
+            text-align: center;
         }
 
-        .row-info, .row-intervalo {
+        .row-intervalo {
             background-color: #15151a;
-            color: #a8a8b3;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1px;
+            color: #71717a;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            height: 35px;
         }
 
         .text-center {
             text-align: center;
-            vertical-align: middle;
         }
 
-        /* CARDS DE AGENDAMENTO (AULAS) */
         .card-aula {
             background-color: #29292e;
-            border-left: 4px solid #ff6b00; /* Detalhe laranja */
-            padding: 10px;
+            border-left: 3px solid #ff6b00;
+            padding: 6px 10px;
             border-radius: 4px;
-            font-size: 13px;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .m-top {
-            margin-top: 8px;
-        }
-
-        /* Ícone de Cancelamento */
-        .cancel-icon {
-            color: #ef4444;
+            font-size: 12px;
             cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 0 4px;
-            transition: transform 0.2s;
+            transition: background-color 0.2s;
         }
 
-        .cancel-icon:hover {
-            transform: scale(1.3);
+        .card-aula:hover {
+            background-color: #323238;
+        }
+
+        .vago {
+            color: #4b4b54;
+            font-size: 12px;
+            font-style: italic;
+            cursor: pointer;
+        }
+        
+        .vago:hover {
+            color: #ff6b00;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-box {
+            background-color: #1e1e24;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+            animation: surgirModal 0.3s ease-out;
+        }
+
+        @keyframes surgirModal {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .modal-header p {
+            font-size: 12px;
+            color: #a8a8b3;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .modal-actions button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-modal-cancelar {
+            background-color: #121214;
+            color: #ffffff;
+            border: 1px solid #29292e !important;
+        }
+
+        .btn-modal-cancelar:hover {
+            background-color: #1a1a1e;
+        }
+
+        .btn-modal-agendar {
+            background-color: #ff6b00;
+            color: #ffffff;
+        }
+
+        .btn-modal-agendar:hover {
+            background-color: #e05e00;
         }
     </style>
 </head>
 <body>
+
     <header class="navbar">
         <div class="logo">Vigia<span>Lab</span></div>
         <div class="user-info">
-            <span>Olá, <strong>Juarez</strong> (Admin)</span>
+            <span>Olá, <strong>Juarez</strong></span>
             <a href="login.html" class="btn-sair">Sair</a>
         </div>
     </header>
@@ -220,14 +305,6 @@
     <main class="dashboard-container">
         
         <section class="filters-section">
-            <div class="filter-group">
-                <label>Turno</label>
-                <div class="toggle-switch">
-                    <button class="toggle-btn active">Manhã</button>
-                    <button class="toggle-btn">Tarde</button>
-                </div>
-            </div>
-
             <div class="filter-group">
                 <label for="filtro-lab">Laboratório / Recurso</label>
                 <select id="filtro-lab">
@@ -257,6 +334,14 @@
                     <option value="3a">3ºA</option>
                 </select>
             </div>
+
+            <div class="filter-group push-right">
+                <label>Turno</label>
+                <div class="toggle-switch">
+                    <button class="toggle-btn active">Manhã</button>
+                    <button class="toggle-btn">Tarde</button>
+                </div>
+            </div>
         </section>
 
         <section class="table-section">
@@ -273,66 +358,122 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="hora-col"><strong>1ª / 2ª Aula</strong><br><small>07:00 - 08:40</small></td>
-                        <td><div class="card-aula admin-only">3ºA - Koike <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">2ºA - Koike <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">2ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">2ºA - Gabriel <span class="cancel-icon">×</span></div></td>
+                        <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                        <td><div class="card-aula">2ºA - Koike</div></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">2ºA - Gabriel</div></td>
+                        <td><div class="card-aula">2ºA - Gabriel</div></td>
                     </tr>
                     
-                    <tr class="row-info">
-                        <td class="hora-col"><small>08:40 - 08:50</small></td>
-                        <td colspan="5" class="text-center">Troca de Sala</td>
+                    <tr>
+                        <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                        <td><div class="card-aula">2ºA - Koike</div></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">2ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
                     </tr>
 
                     <tr>
-                        <td class="hora-col"><strong>3ª Aula</strong><br><small>08:50 - 09:40</small></td>
-                        <td><div class="card-aula admin-only">3ºA - Giovana <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Koike <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Giovana <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Carmem <span class="cancel-icon">×</span></div></td>
+                        <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
+                        <td><div class="card-aula">3ºA - Giovana</div></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                        <td><div class="card-aula">3ºA - Giovana</div></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Carmem</div></td>
                     </tr>
 
                     <tr>
-                        <td class="hora-col"><strong>4ª Aula</strong><br><small>09:40 - 10:30</small></td>
-                        <td><div class="card-aula admin-only">3ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Koike <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">2ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Gabriel <span class="cancel-icon">×</span></div></td>
-                        <td><div class="card-aula admin-only">3ºA - Leandro <span class="cancel-icon">×</span></div></td>
+                        <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                        <td><div class="card-aula">2ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Leandro</div></td>
                     </tr>
 
                     <tr class="row-intervalo">
-                        <td class="hora-col"><small>10:30 - 10:50</small></td>
+                        <td class="hora-col"><small>10:10 - 10:35</small></td>
                         <td colspan="5" class="text-center">INTERVALO</td>
                     </tr>
 
                     <tr>
-                        <td class="hora-col"><strong>5ª / 6ª Aula</strong><br><small>10:50 - 12:30</small></td>
-                        <td>
-                            <div class="card-aula admin-only">3ºA - Gabriel <span class="cancel-icon">×</span></div>
-                            <div class="card-aula admin-only m-top">3ºA - Gabriel <span class="cancel-icon">×</span></div>
-                        </td>
-                        <td><div class="card-aula admin-only">3ºA - Nylton <span class="cancel-icon">×</span></div></td>
-                        <td>
-                            <div class="card-aula admin-only">2ºA - Nylton <span class="cancel-icon">×</span></div>
-                            <div class="card-aula admin-only m-top">2ºA - Rosangela <span class="cancel-icon">×</span></div>
-                        </td>
-                        <td>
-                            <div class="card-aula admin-only">3ºA - Koike <span class="cancel-icon">×</span></div>
-                            <div class="card-aula admin-only m-top">2ºA - Gabriel <span class="cancel-icon">×</span></div>
-                        </td>
-                        <td>
-                            <div class="card-aula admin-only">3ºA - Koike <span class="cancel-icon">×</span></div>
-                            <div class="card-aula admin-only m-top">2ºA - Sandro <span class="cancel-icon">×</span></div>
-                        </td>
+                        <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
+                        <td><div class="card-aula">3ºA - Gabriel</div></td>
+                        <td><div class="card-aula">3ºA - Nylton</div></td>
+                        <td><div class="card-aula">2ºA - Nylton</div></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                        <td><div class="card-aula">3ºA - Koike</div></td>
+                    </tr>
+
+                    <tr>
+                        <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
+                        <td><span class="vago" onclick="abrirModal()">+ Disponível</span></td>
+                        <td><span class="vago" onclick="abrirModal()">+ Disponível</span></td>
+                        <td><div class="card-aula">2ºA - Rosangela</div></td>
+                        <td><div class="card-aula">2ºA - Gabriel</div></td>
+                        <td><div class="card-aula">2ºA - Sandro</div></td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
+    <div class="modal-overlay" id="modalAgendamento">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Solicitar Agendamento</h3>
+                <p>Escolha os dados para reservar este horário</p>
+            </div>
+            
+            <form action="#" method="POST" class="modal-form">
+                <div class="filter-group">
+                    <label for="modal-prof">Professor Regente</label>
+                    <select id="modal-prof" required>
+                        <option value="" disabled selected>Selecione o professor...</option>
+                        <option value="koike">Koike</option>
+                        <option value="gabriel">Gabriel</option>
+                        <option value="giovana">Giovana</option>
+                        <option value="juarez">Juarez</option>
+                    </select>
+                </div>
 
+                <div class="filter-group">
+                    <label for="modal-turma">Turma</label>
+                    <select id="modal-turma" required>
+                        <option value="" disabled selected>Selecione a turma...</option>
+                        <option value="1a">1ºA</option>
+                        <option value="2a">2ºA</option>
+                        <option value="3a">3ºA</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-modal-cancelar" onclick="fecharModal()">Cancelar</button>
+                    <button type="submit" class="btn-modal-agendar">Agendar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById('modalAgendamento');
+
+        function abrirModal() {
+            modal.style.display = 'flex';
+        }
+
+        function fecharModal() {
+            modal.style.display = 'none';
+            
+            document.getElementById('modal-prof').value = "";
+            document.getElementById('modal-turma').value = "";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                fecharModal();
+            }
+        }
+    </script>
 </body>
 </html>
