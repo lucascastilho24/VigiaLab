@@ -282,3 +282,39 @@ body {
 .btn-modal-agendar:hover {
     background-color: #e05e00;
 }
+
+.bloco-grade {
+    background-color: #1e1e24;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #29292e;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-recurso {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #ff6b00; /* Detalhe laranja na lateral */
+}
+
+.row-intervalo {
+    background-color: #121214 !important; /* Fundo mais escuro */
+}
+
+.row-intervalo td {
+    color: #a8a8b3;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 12px !important;
+}
+
+/* Classe auxiliar para centralizar texto */
+.text-center {
+    text-align: center;
+}

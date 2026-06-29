@@ -56,120 +56,444 @@
             </div>
         </section>
 
-        <section class="table-section">
-            <table class="cronograma-table">
-                <thead>
-                    <tr>
-                        <th>Horário / Aula</th>
-                        <th>Segunda-feira</th>
-                        <th>Terça-feira</th>
-                        <th>Quarta-feira</th>
-                        <th>Quinta-feira</th>
-                        <th>Sexta-feira</th>
-                    </tr>
-                </thead>
-                <tbody id="grade-manha">
-                    <tr>
-                        <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr class="row-intervalo">
-                        <td class="hora-col"><small>10:10 - 10:35</small></td>
-                        <td colspan="5" class="text-center">INTERVALO (MANHÃ)</td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                </tbody>
+        <section class="grades-section">
 
-                <tbody id="grade-tarde" hidden>
-                    <tr>
-                        <td class="hora-col"><strong>1ª Aula</strong><br><small>13:10 - 14:00</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>2ª Aula</strong><br><small>14:00 - 14:50</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>3ª Aula</strong><br><small>14:50 - 15:30</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr class="row-intervalo">
-                        <td class="hora-col"><small>15:30 - 15:55</small></td>
-                        <td colspan="5" class="text-center">INTERVALO (TARDE)</td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>4ª Aula</strong><br><small>15:55 - 16:45</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                    <tr>
-                        <td class="hora-col"><strong>5ª Aula</strong><br><small>16:45 - 17:35</small></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                        <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="bloco-grade" data-recurso="lab1" data-turno="manha" hidden>
+                <h3 class="titulo-recurso">Laboratório 1 - Manhã</h3>
+                <table class="cronograma-table">
+                    <thead>
+                        <tr>
+                            <th>Horário / Aula</th>
+                            <th>Segunda-feira</th>
+                            <th>Terça-feira</th>
+                            <th>Quarta-feira</th>
+                            <th>Quinta-feira</th>
+                            <th>Sexta-feira</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grade-manha">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>10:10 - 10:35</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (MANHÃ)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="bloco-grade" data-recurso="lab1" data-turno="tarde" hidden>
+                <h3 class="titulo-recurso">Laboratório 1 - Tarde</h3>
+                <table class="cronograma-table">
+                    <tbody id="grade-tarde">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>13:10 - 14:00</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>14:00 - 14:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>14:50 - 15:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>15:30 - 15:55</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (TARDE)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>15:55 - 16:45</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>16:45 - 17:35</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bloco-grade" data-recurso="lab2" data-turno="manha" hidden>
+                <h3 class="titulo-recurso">Laboratório 2 - Manhã</h3>
+                <table class="cronograma-table">
+                    <thead>
+                        <tr>
+                            <th>Horário / Aula</th>
+                            <th>Segunda-feira</th>
+                            <th>Terça-feira</th>
+                            <th>Quarta-feira</th>
+                            <th>Quinta-feira</th>
+                            <th>Sexta-feira</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grade-manha">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>10:10 - 10:35</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (MANHÃ)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bloco-grade" data-recurso="lab2" data-turno="tarde" hidden>
+                <h3 class="titulo-recurso">Laboratório 2 - Tarde</h3>
+                <table class="cronograma-table">
+                    <tbody id="grade-tarde">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>13:10 - 14:00</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>14:00 - 14:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>14:50 - 15:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>15:30 - 15:55</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (TARDE)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>15:55 - 16:45</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>16:45 - 17:35</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bloco-grade" data-recurso="lab3" data-turno="manha">
+                <h3 class="titulo-recurso">Laboratório 3 - Técnico</h3>
+                <table class="cronograma-table">
+                    <thead>
+                        <tr>
+                            <th>Horário / Aula</th>
+                            <th>Segunda-feira</th>
+                            <th>Terça-feira</th>
+                            <th>Quarta-feira</th>
+                            <th>Quinta-feira</th>
+                            <th>Sexta-feira</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grade-manha">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>10:10 - 10:35</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (MANHÃ)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bloco-grade" data-recurso="tablets" data-turno="manha" hidden>
+                <h3 class="titulo-recurso">Tablets - Manhã</h3>
+                <table class="cronograma-table">
+                    <thead>
+                        <tr>
+                            <th>Horário / Aula</th>
+                            <th>Segunda-feira</th>
+                            <th>Terça-feira</th>
+                            <th>Quarta-feira</th>
+                            <th>Quinta-feira</th>
+                            <th>Sexta-feira</th>
+                        </tr>
+                    </thead>
+                    <tbody id="grade-manha">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>07:00 - 07:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>07:50 - 08:40</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>08:40 - 09:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>09:30 - 10:10</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>10:10 - 10:35</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (MANHÃ)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>10:35 - 11:25</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>6ª Aula</strong><br><small>11:25 - 12:15</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bloco-grade" data-recurso="tablets" data-turno="tarde" hidden>
+                <h3 class="titulo-recurso">Tablets - Tarde</h3>
+                <table class="cronograma-table">
+                    <tbody id="grade-tarde">
+                        <tr>
+                            <td class="hora-col"><strong>1ª Aula</strong><br><small>13:10 - 14:00</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>2ª Aula</strong><br><small>14:00 - 14:50</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>3ª Aula</strong><br><small>14:50 - 15:30</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr class="row-intervalo">
+                            <td class="hora-col"><small>15:30 - 15:55</small></td>
+                            <td colspan="5" class="text-center">INTERVALO (TARDE)</td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>4ª Aula</strong><br><small>15:55 - 16:45</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                        <tr>
+                            <td class="hora-col"><strong>5ª Aula</strong><br><small>16:45 - 17:35</small></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                            <td><span class="vago" onclick="abrirModal(this)">+ Disponível</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </section>
     </main>
     <div class="modal-overlay" id="modalAgendamento">
@@ -208,6 +532,19 @@
             </form>
         </div>
     </div>
+
+    <div class="modal-overlay" id="modalCancelar">
+        <div class="modal-box">
+            <h2>Cancelar Agendamento</h2>
+            <p>Tem certeza que deseja desmarcar a aula de <strong id="cancelar-info"></strong>?</p>
+            
+            <div class="modal-actions">
+                <button type="button" class="btn-modal-cancelar" onclick="fecharModalCancelar()">Voltar</button>
+                <button type="button" id="btn-confirmar-cancelar" class="btn-modal-agendar" style="background-color: #dc3545;">Confirmar Cancelamento</button>
+            </div>
+        </div>
+    </div>
+
     <script src="../Scripts/dashboard.js" defer></script>
 </body>
 </html>
